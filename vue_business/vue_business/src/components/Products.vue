@@ -14,14 +14,9 @@ import { ProdutoService } from '../services/ProdutoService';
 import { onMounted, ref } from 'vue'
 import ProductCard from './ProductCard.vue'
 import { Observable } from 'rxjs'
+import type {Product } from '../models/Product'
+ 
 
-interface Product {
-  id: number
-  name: string
-  price: number
-  description: string
-  image: string
-}
 
 const emit = defineEmits<{
   (e: 'add-to-cart', product: Product): void

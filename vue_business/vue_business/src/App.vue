@@ -25,7 +25,7 @@
 
         <!-- Página Sobre -->
     <div v-if="currentView === 'estoque'" class="container mt-5">
-     <Estoque  />
+     <Estoque  :produtos_estoque="[]"/>
     </div>
 
     <Footer/>
@@ -41,18 +41,13 @@ import Cart from './components/Cart.vue'
 import Footer from './components/Footer.vue'
 import Sobre from './components/Sobre.vue'
 import Estoque from './components/Estoque.vue'  
+import type {Product} from './models/Product'
 
 type View = 'home' | 'products' | 'cart' | 'about'|'estoque'
 
 const currentView = ref<View>('home')
 
-interface Product {
-  id: number
-  name: string
-  price: number
-  description: string
-  image: string
-}
+
 
 type CartItem = Product & {
   quantity: number

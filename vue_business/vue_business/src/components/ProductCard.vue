@@ -24,13 +24,7 @@
 </template>
 
 <script setup lang="ts">
-interface Product {
-  id: number
-  name: string
-  price: number
-  description: string
-  image: string
-}
+import type {Product} from '../models/Product'
 
 const {product} = defineProps<{
   product: Product
