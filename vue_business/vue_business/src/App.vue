@@ -25,7 +25,7 @@
 
         <!-- Página Sobre -->
     <div v-if="currentView === 'estoque'" class="container mt-5">
-     <Estoque  :produtos_estoque="[]"/>
+     <Estoque/>
     </div>
 
     <Footer/>
